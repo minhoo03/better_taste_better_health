@@ -7,6 +7,10 @@
     <title>정식품 진한 콩국물</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="./src/jquery.smoothwheel.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
@@ -17,7 +21,25 @@
 
         <div class="container">
             <header class="slide">
-                <img src="https://www.vegemil.co.kr:10001/Main/beanSoup/assets/img/project/mainVisual04.jpg" alt="">
+                <!-- <img src="https://www.vegemil.co.kr:10001/Main/beanSoup/assets/img/project/mainVisual04.jpg" alt=""> -->
+                <ul>
+                    <li><img src="https://learninginbloom.com/wp-content/uploads/2018/08/Copy-of-Copy-of-1280px-%C3%97-720px-%E2%80%93-Untitled-Design-1.png" alt=""></li>
+                </ul>
+                <ul>
+                  <li><img src="https://i.redd.it/2p904l4j3ktz.png" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="https://www.nicepng.com/png/detail/158-1586038_animeworld-confident-pose-no-bg-720px-min-wallpaper.png" alt=""></li>
+                </ul>
+                <ul>
+                  <li><img src="http://t.wallpaperweb.org/wallpaper/nature/1280x720/Wallpaper_1080p_4_1280x720.jpg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="https://fl-designassembly-media.s3.amazonaws.com/uploads/2020/02/Header-1440px-x-720px-scaled.jpg" alt=""></li>
+                </ul>
+                <ul>
+                  <li><img src="https://lh3.googleusercontent.com/proxy/yALDSAibyXjeKmonOnersS8cMn2NqoMV2gPYKJzuQL8Yo6t5K59LgzvQHfZku5m17kGP_SZv-xEzd2A3d-HEVDmUJy45Z_8qgwUWhiIFZBykCV0K8JYtLaN428I6fa2GpcWtK5zH97yZLKppL0G2BC_zIscX" alt=""></li>
+                </ul>
             </header>
 
             <section class="content">
@@ -66,7 +88,7 @@
                                 </div>
                             </div>
                             <div class="intro_des_img">
-                                <div></div>
+                                <div class="intro_des_img_img"></div>
                             </div>
                         </div>
                     </div>
@@ -78,4 +100,22 @@
     </div> <!-- #wrapper -->
 </body>
 <script src="./js/index.js"></script>
+<script>
+  $('.slide').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 1
+        }
+      }
+    ]
+});
+
+</script>
 </html>

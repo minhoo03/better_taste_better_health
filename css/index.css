@@ -48,15 +48,53 @@ body {
     border-left: 1px solid #c4b099;
 }
 
+/* .slick-prev.slick-arrow {
+    display: none;
+} */
+
+button.slick-arrow {
+    display: none;
+}
+
 .slide {
     width: 100%;
     height: 100vh;
     background: #000;
     overflow: hidden;
 }
+/* 화살표 */
+.slick-arrow {
+    z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
+    position: absolute; /* 원하는 위치에 지정  */
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-25px);
+}
+.slick-prev.slick-arrow {
+    /* prev 이전 */
+    left: 0;
+}
+.slick-next.slick-arrow {
+    /* next 다음 */
+    right: 0;
+}
+
+/* 아래점 */
+.slick-dots {
+    text-align: center;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slick-prev slick-arrow {
+    display: none;
+}
+
 .slide img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
