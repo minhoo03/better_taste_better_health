@@ -1,7 +1,21 @@
+/* 회색 테두리 : c4b099 */
+/* 배경 : b17d55 */
+/* border-bottom : ffedc6 */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
 }
 
 html,
@@ -39,6 +53,11 @@ body {
     border-right: 1px solid #c4b099;
 }
 
+.left_padding img {
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
 .right_padding {
     position: fixed;
     width: 100px;
@@ -62,22 +81,56 @@ button.slick-arrow {
     background: #000;
     overflow: hidden;
 }
+
+.slide::before {
+    content: '';
+    width: 92%;
+    height: 120px;
+    border-top: 1px solid #fff;
+    z-index: 800;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 /* 화살표 */
 .slick-arrow {
-    z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
+    z-index: 999; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
     position: absolute; /* 원하는 위치에 지정  */
-    top: 50%;
+    bottom: 4%;
     width: 50px;
     height: 50px;
-    transform: translateY(-25px);
 }
 .slick-prev.slick-arrow {
     /* prev 이전 */
-    left: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    right: 200px;
+    background: none;
+    color: #fff;
+    border: none;
 }
+
+.slick-prev.slick-arrow:focus,
+.slick-next.slick-arrow:focus {
+    outline: 0;
+}
+
 .slick-next.slick-arrow {
     /* next 다음 */
-    right: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    right: 100px;
+    background: none;
+    color: #fff;
+    border: none;
+}
+
+.slick-next.slick-arrow:hover,
+.slick-prev.slick-arrow:hover {
+    font-size: 20px;
 }
 
 /* 아래점 */
@@ -103,7 +156,7 @@ button.slick-arrow {
 .intro {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     margin: 100px 0px;
 }
 
@@ -119,7 +172,7 @@ button.slick-arrow {
     display: block;
     width: 15px;
     margin: 0 auto;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ffedc6;
 }
 
 .intro_title {
@@ -152,13 +205,51 @@ button.slick-arrow {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    background: #000;
+    /* background: #000; */
     overflow: hidden;
+    position: relative;
+}
+
+.intro_des_img::before {
+    content: '36+';
+    font-size: 92px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 180px;
+    width: 240px;
+    height: 240px;
+    border: 1px solid #c4b099;
+    bottom: 30px;
+    left: 30px;
+    position: absolute;
+    z-index: 999;
+}
+.intro_des_img::after {
+    content: 'Now-Official Recipe';
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+    line-height: 18;
+    padding-left: 30px;
+    width: 240px;
+    height: 240px;
+    bottom: 30px;
+    left: 30px;
+    position: absolute;
+    z-index: 999;
 }
 
 .intro_des_img_img {
+    width: 100%;
     z-index: 1;
+    position: relative;
+}
+
+.intro_des_img_img img {
+    position: absolute;
+    top: -100px;
+    width: 120%;
 }
 
 /* .intro_des_img div {
@@ -241,7 +332,7 @@ button.slick-arrow {
 .intro_des_container_left_box {
     position: relative;
     width: 95%;
-    height: 60%;
+    height: 65%;
     margin: 8px auto;
     border: 1px solid #c4b099;
     display: flex;
@@ -295,4 +386,14 @@ button.slick-arrow {
 
 .intro_des_container_right_box p {
     color: #fff;
+}
+
+/* about */
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 140vh;
+    margin: 100px 0px;
+    background: #000;
 }
