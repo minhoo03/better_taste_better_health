@@ -242,7 +242,7 @@ button.slick-arrow {
     text-align: left;
     color: #fff;
     line-height: 18;
-    padding-left: 52px;
+    padding-left: 32px;
     width: 240px;
     height: 240px;
     bottom: 52px;
@@ -253,6 +253,7 @@ button.slick-arrow {
 
 .intro_des_img_img {
     width: 100%;
+
     min-height: 100vh;
     z-index: 1;
     position: relative;
@@ -261,7 +262,6 @@ button.slick-arrow {
 .intro_des_img_img img {
     position: absolute;
     /* top: -100px; */
-
     width: 120%;
     height: 100%;
     object-fit: cover;
@@ -557,4 +557,93 @@ button.slick-arrow {
 .recipe_book2 img {
     width: 118px;
     height: 84px;
+}
+
+/* main_recipe */
+
+.main_recipe {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 100px 0px;
+    background-image: url('https://www.vegemil.co.kr:10001/Main/beanSoup/assets/img/project/recipe_s01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_recipe ul {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 320px;
+    display: flex;
+}
+
+.main_recipe ul li {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    border: 1px solid #c4b099;
+    position: relative;
+
+    text-align: center;
+    color: #fff;
+    line-height: 35px;
+}
+
+.main_recipe ul li img {
+    width: 68px;
+    height: 68px;
+}
+
+.best_recipe {
+    position: absolute;
+    width: 600px;
+    height: 550px;
+    background: #fff;
+    right: 80px;
+    bottom: 0;
+    padding: 60px;
+}
+
+.best_recipe h3 {
+    color: #d25600;
+    padding-top: 20px;
+    letter-spacing: 4px;
+}
+
+.best_recipe h1 {
+    font-size: 40px;
+    padding-left: 4px;
+    margin: 20px 0px 30px 0px;
+}
+
+.best_recipe p {
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+.best_recipe div {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 220px;
+    height: 40px;
+    line-height: 0px;
+    background: none;
+    color: #d25600;
+    font-size: 18px;
+    padding: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: 2px solid #d25600;
+    transition: hover 0.6s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.best_recipe div:hover {
+    margin-left: 5px;
 }
