@@ -757,12 +757,16 @@ header .center.slick-active {
 }
 
 .keword_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40%;
     height: 100%;
     /* background: blue; */
 }
 
 .keword_list_padding {
+    width: 100%;
     padding: 80px 20px 80px 80px;
 }
 
