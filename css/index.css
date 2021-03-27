@@ -22,6 +22,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background: #b17d55;
 }
 
 .wrapper {
@@ -39,7 +40,6 @@ body {
 
 .container {
     width: 100%;
-    height: 3000px;
     padding: 0 100px;
     background: #b17d55;
 }
@@ -82,11 +82,20 @@ button.slick-arrow {
     overflow: hidden;
 }
 
-.slide::before {
+.slide ul li h1 {
+    z-index: 999;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    margin-left: 110px;
+    bottom: 10%;
+}
+
+.slide::after {
     content: '';
     width: 92%;
-    height: 120px;
-    border-top: 1px solid #fff;
+    height: 60px;
+    border-top: 1px solid #c4b099;
     z-index: 800;
     position: absolute;
     right: 0;
@@ -97,9 +106,9 @@ button.slick-arrow {
 .slick-arrow {
     z-index: 999; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
     position: absolute; /* 원하는 위치에 지정  */
-    bottom: 4%;
-    width: 50px;
-    height: 50px;
+    bottom: 2%;
+    width: 30px;
+    height: 30px;
 }
 .slick-prev.slick-arrow {
     /* prev 이전 */
@@ -130,7 +139,8 @@ button.slick-arrow {
 
 .slick-next.slick-arrow:hover,
 .slick-prev.slick-arrow:hover {
-    font-size: 20px;
+    color: #e2c7b3;
+    transform: scale(1.1);
 }
 
 /* 아래점 */
@@ -454,20 +464,80 @@ button.slick-arrow {
     display: flex;
     flex-direction: column;
 }
-
+/* 3등분 */
 .recipe_1 {
     width: 100%;
     height: 100%;
     background: blue;
 }
-
+/* 3등분을 2등분 */
 .recipe_container {
     width: 100%;
     height: 50%;
 }
-
+/* 6등분의 100% */
 .recipe_box {
     width: 100%;
     height: 100%;
     background: #000;
+    position: relative;
+}
+
+.recipe_book {
+    width: 75%;
+    height: 75%;
+    border: 1px solid red;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.recipe_book::after,
+.recipe_book2::after {
+    content: '';
+    font-size: 20px;
+    text-align: left;
+    line-height: 18;
+    width: 125%;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    z-index: 999;
+}
+
+.recipe_book2 {
+    width: 75%;
+    height: 75%;
+    border: 1px solid red;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+}
+
+.recipe_book::before,
+.recipe_book2::before {
+    content: '';
+    font-size: 20px;
+    text-align: left;
+    line-height: 18;
+    width: 240px;
+    height: 125%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    z-index: 999;
 }
