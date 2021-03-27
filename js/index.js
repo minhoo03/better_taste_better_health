@@ -19,17 +19,21 @@ console.log('박스 위치',intro_des_img_offset_top)
 
 wrapper.addEventListener("scroll" , function() {
     wrapper_scroll_top = $(wrapper).scrollTop() // 현재 스크롤
-    intro_des_img_scroll = wrapper_scroll_top - (intro_des_img_offset_top - intro_des_img_height) // 현재스크롤 - 박스위치 ( -100px -> 0px)
+    intro_des_img_scroll = wrapper_scroll_top - (intro_des_img_offset_top - intro_des_img_height) -800 // 현재스크롤 - 박스위치 ( -100px -> 0px)
 
     // console.log('wrapper_scroll_top',wrapper_scroll_top)
     // console.log(wrapper_scroll_top - (intro_des_img_offset_top - intro_des_img_height))
+
+    if(intro_des_img_scroll >= 300) {
+        console.log("실행")
+    }
 
     slideImg.css({
         'transform': `translate(0px,${wrapper_scroll_top/4}px)`
     })
 
     intro_des_img_img.css({
-        'transform': `translate(0px,${intro_des_img_scroll/12}px)`
+        'transform': `translate(0px,${intro_des_img_scroll/8}px)`
     })
     
 })

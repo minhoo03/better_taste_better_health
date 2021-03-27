@@ -156,7 +156,7 @@ button.slick-arrow {
 .intro {
     position: relative;
     width: 100%;
-    height: 110vh;
+    min-height: 110vh;
     margin: 100px 0px;
 }
 
@@ -197,13 +197,14 @@ button.slick-arrow {
     width: 100%;
     height: 100%;
     /* background: grey; */
-    padding: 52px 0px 52px 96px;
+    padding: 52px 0px 52px 52px;
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
 }
 .intro_des_img {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     /* background: #000; */
     overflow: hidden;
@@ -220,8 +221,8 @@ button.slick-arrow {
     width: 240px;
     height: 240px;
     border: 1px solid #c4b099;
-    bottom: 30px;
-    left: 30px;
+    bottom: 52px;
+    left: 52px;
     position: absolute;
     z-index: 999;
 }
@@ -231,25 +232,29 @@ button.slick-arrow {
     text-align: left;
     color: #fff;
     line-height: 18;
-    padding-left: 30px;
+    padding-left: 52px;
     width: 240px;
     height: 240px;
-    bottom: 30px;
-    left: 30px;
+    bottom: 52px;
+    left: 52px;
     position: absolute;
     z-index: 999;
 }
 
 .intro_des_img_img {
     width: 100%;
+    min-height: 100vh;
     z-index: 1;
     position: relative;
 }
 
 .intro_des_img_img img {
     position: absolute;
-    top: -100px;
+    /* top: -100px; */
+
     width: 120%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* .intro_des_img div {
@@ -260,7 +265,7 @@ button.slick-arrow {
 
 .intro_des_img div {
     width: 80%;
-    height: 80%;
+    height: 100%;
     background: red;
 }
 
@@ -317,14 +322,9 @@ button.slick-arrow {
     justify-content: space-around;
 }
 
+.intro_des_container_right,
 .intro_des_container_left {
-    width: 40%;
-    height: 200px;
-    border: 1px solid #c4b099;
-}
-
-.intro_des_container_right {
-    width: 40%;
+    min-width: 40%;
     height: 200px;
     border: 1px solid #c4b099;
 }
@@ -393,7 +393,81 @@ button.slick-arrow {
 .about {
     position: relative;
     width: 100%;
-    height: 140vh;
+    min-height: 100vh;
     margin: 100px 0px;
+    background: #ccc;
+}
+
+.about_title {
+    width: 100%;
+    height: 150px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.about_title h4 {
+    color: #ffedc6;
+}
+
+.about_title h1 {
+    color: #fff;
+    font-size: 32px;
+}
+
+.about_content {
+    width: 100%;
+    height: 75vh;
+    background: #000;
+    display: flex;
+}
+
+.about_img {
+    width: 34%;
+    background: rgb(101, 80, 117);
+}
+
+.about_img h2 {
+    text-align: center;
+}
+
+.about_img h2 img {
+    width: 80%;
+}
+
+.about_recipe {
+    width: 66%;
+    background: rgb(136, 124, 130);
+
+    display: flex;
+}
+
+.about_recipe > div {
+    width: calc(100% / 3);
+}
+
+.recipe_1,
+.recipe_2,
+.recipe_3 {
+    background: rgb(103, 107, 94);
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe_1 {
+    width: 100%;
+    height: 100%;
+    background: blue;
+}
+
+.recipe_container {
+    width: 100%;
+    height: 50%;
+}
+
+.recipe_box {
+    width: 100%;
+    height: 100%;
     background: #000;
 }
